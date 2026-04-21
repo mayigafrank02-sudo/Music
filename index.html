@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-player">
+        <!-- Sidebar - Playlist -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <span>Harmony</span>
+            </div>
+            
+            <div class="playlist">
+                <h3><i class="fas fa-list"></i> Playlist</h3>
+                <ul class="song-list">
+                    <li class="song-item active" data-src="song1.mp3">
+                        <span class="number">01</span>
+                        <div class="song-info">
+                            <div class="song-title">Midnight City</div>
+                            <div class="song-artist">M83</div>
+                        </div>
+                        <span class="duration">4:04</span>
+                    </li>
+                    <!-- More songs will be added dynamically -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Now Playing Section -->
+            <div class="now-playing">
+                <div class="album-art">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f" alt="Album Art">
+                    <div class="vinyl-overlay"></div>
+                </div>
+                
+                <div class="song-details">
+                    <h1 class="current-title">Midnight City</h1>
+                    <h2 class="current-artist">M83</h2>
+                    <h3 class="current-album">Hurry Up, We're Dreaming</h3>
+                    
+                    <div class="progress-container">
+                        <div class="time-current">0:00</div>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="time-total">4:04</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="control-btn" id="shuffle">
+                    <i class="fas fa-random"></i>
+                </button>
+                
+                <button class="control-btn" id="prev">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                
+                <button class="control-btn play-btn" id="play">
+                    <i class="fas fa-play"></i>
+                </button>
+                
+                <button class="control-btn" id="next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                
+                <button class="control-btn" id="repeat">
+                    <i class="fas fa-redo"></i>
+                </button>
+            </div>
+
+            <!-- Volume & Settings -->
+            <div class="extra-controls">
+                <div class="volume">
+                    <i class="fas fa-volume-up"></i>
+                    <input type="range" id="volume-slider" min="0" max="100" value="70">
+                </div>
+                
+                <div class="playback-rate">
+                    <span>Speed:</span>
+                    <select id="speed">
+                        <option value="0.75">0.75x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.25">1.25x</option>
+                        <option value="1.5">1.5x</option>
+                    </select>
+                </div>
+                
+                <button class="control-btn" id="queue">
+                    <i class="fas fa-bars"></i> Queue
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
